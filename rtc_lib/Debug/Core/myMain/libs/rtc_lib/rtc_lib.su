@@ -1,0 +1,17 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static
+../Drivers/CMSIS/Include/core_cm0plus.h:848:22:__NVIC_SetPriority	24	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:13:14:rtc_init_clock	16	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:46:14:rtc_start_clock	8	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:55:14:rtc_stop_clock	8	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:69:14:rtc_set_time	32	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:112:14:rtc_get_time	16	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:123:14:rtc_set_date	32	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:160:14:rtc_get_date	16	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:170:14:rtc_set_time_alarm	16	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:198:14:rtc_stop_alarm	8	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:205:6:rtc_alarm_handler	16	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:228:6:rtc_disable_protection	8	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:235:6:rtc_enable_protection	8	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:241:9:dec_to_bcd	24	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:255:9:bcd_to_dec	24	static
+../Core/myMain/libs/rtc_lib/rtc_lib.c:266:13:rtc_alarm_callback	16	static
