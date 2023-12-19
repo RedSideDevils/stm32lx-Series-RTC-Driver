@@ -131,12 +131,12 @@ void rtc_alarm_callback(RTC_Time_t *m_time, RTC_Alarm_t curr_alarm)
 
 int main(void)
 {
-    RTC_Time_t time_set = {.hours=15, .minutes=8, .seconds=20};
-    RTC_Time_t time_get = {0};
-     
-    RTC_Time_t alarm_time_a = {.hours=18, .minutes=4, .seconds=5};
-    RTC_Time_t alarm_time_b = {.hours=19, .minutes=8, .seconds=25};
-    
+	RTC_Time_t time_set = {.hours=15, .minutes=8, .seconds=20};
+	RTC_Time_t time_get = {0};
+	
+	RTC_Time_t alarm_time_a = {.hours=18, .minutes=4, .seconds=5};
+	RTC_Time_t alarm_time_b = {.hours=19, .minutes=8, .seconds=25};
+	
 	if(!rtc_init_clock())
 	{
 		errno_handler();
@@ -163,7 +163,7 @@ int main(void)
 	{
 		errno_handler();
 	}
-
+	
 	if(!(rtc_bind_time_alarm(&alarm_time_a, ALARM_A)))
 	{
 		errno_handler();
