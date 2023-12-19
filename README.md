@@ -1,4 +1,4 @@
-# Low level RTC Driver for STM32L0 Series 
+# Low-level RTC Driver for STM32L0 Series 
 Made by **Trippingcarpet** 
 
 [![Build Status](https://app.travis-ci.com/microsoft/DynamicProto-JS.svg?branch=master)](https://github.com/RedSideDevils/dma_driver_for_stm32/releases/tag/V1.0.0) 
@@ -9,7 +9,7 @@ Made by **Trippingcarpet**
 - Fast solution for your STM projects.
 - Easy integratation.
  
-> Note: Library use LSE as clock source. (Freq: 32.768 KHz)
+> Note: The library uses LSE as a clock source. (Freq: 32.768 KHz)
 
 ## Installation
 
