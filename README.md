@@ -109,7 +109,7 @@ Backup registers memory blocks.  <br/>
 ```
 Timeouts  <br/>
 ```C
-#define WAIT_LSE_ON_TIMEOUT	  1000
+#define WAIT_LSE_ON_TIMEOUT   1000
 #define WAIT_RTC_SYNC_TIMEOUT 1000
 #define WAIT_RTC_INIT_TIMEOUT 1000
 ```
