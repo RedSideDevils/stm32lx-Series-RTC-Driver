@@ -174,4 +174,4 @@ int main(void)
 		rtc_alarm_interrupt_handler(ALARM_A);
 	}
 }
-``
+```
