@@ -114,3 +114,64 @@ Timeouts  <br/>
 #define WAIT_RTC_INIT_TIMEOUT 1000
 ```
 
+## Example 
+```C
+#include "main.h"
+#include "rtc_lib/rtc_lib.h"
+
+uint8_t handle_alarm_flag = 0;
+
+void rtc_alarm_callback(RTC_Time_t *m_time, RTC_Alarm_t curr_alarm)
+{
+    if(curr_alarm == ALARM_A)
+    {
+        handle_alarm_flag = 1;
+    }
+}
+
+int main(void)
+{
+    RTC_Time_t time_set = {.hours=15, .minutes=8, .seconds=20};
+    RTC_Time_t time_get = {0};
+     
+    RTC_Time_t alarm_time_a = {.hours=18, .minutes=4, .seconds=5};
+    RTC_Time_t alarm_time_b = {.hours=19, .minutes=8, .seconds=25};
+    
+	if(!rtc_init_clock())
+	{
+		errno_handler();
+	}
+	
+	if(!rtc_start_clock())
+	{
+		errno_handler();
+	}
+	
+	if(!rtc_restore_time())
+	{
+		if(!rtc_set_time(&time_set))
+		{
+			errno_handler();
+		}
+		if(!rtc_save_time())
+		{
+			errno_handler();
+		}
+	}
+	
+	if(!rtc_get_time(&time_get))
+	{
+		errno_handler();
+	}
+
+	if(!(rtc_bind_time_alarm(&alarm_time_a, ALARM_A)))
+	{
+		errno_handler();
+	}
+	
+	for(;;)
+	{
+		rtc_alarm_interrupt_handler(ALARM_A);
+	}
+}
+``
