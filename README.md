@@ -35,29 +35,29 @@ Made by **Trippingcarpet**
 
 1. Init library function.  <br/>
 `RTC_Status_t rtc_init_clock(void)` Function change clock source as LSE, sets prescaler to **1Hz**, and sync RTC clock.  <br/>
-**Call at the start of the program**.  <br/>
+**Call at the start of the program**.  <br/><br/>
 2. Start / Stop functions.  <br/>
-`RTC_Status_t rtc_start_clock(void)` Starts RTC Clock.  <br/>
-`RTC_Status_t rtc_stop_clock(void)` Stops RTC Clock.  <br/>
-3. Time / Date config functions.  <br/>
+`RTC_Status_t rtc_start_clock(void)` Starts RTC Clock.  <br/><br/>
+`RTC_Status_t rtc_stop_clock(void)` Stops RTC Clock.  <br/><br/>
+3. Time / Date config functions.  <br/><br/>
 **Setters**  <br/>
-`RTC_Status_t rtc_set_time(RTC_Time_t *m_time)` Sets time, but not save to backup registers. Call `rtc_save_time()` to save current time to memory.  <br/>
-`RTC_Status_t rtc_set_date(RTC_Date_t *m_date)` Sets the date, but not save it to backup registers. Call `rtc_save_date()` to save the current date to memory.  <br/>
+`RTC_Status_t rtc_set_time(RTC_Time_t *m_time)` Sets time, but not save to backup registers. Call `rtc_save_time()` to save current time to memory.  <br/><br/>
+`RTC_Status_t rtc_set_date(RTC_Date_t *m_date)` Sets the date, but not save it to backup registers. Call `rtc_save_date()` to save the current date to memory.  <br/><br/>
 **Getters**  <br/>
-`RTC_Status_t rtc_set_date(RTC_Date_t *m_date)` Returns the current time.  <br/>
-`RTC_Status_t rtc_get_date(RTC_Date_t *m_date)` Returns the current date.  <br/>
+`RTC_Status_t rtc_set_date(RTC_Date_t *m_date)` Returns the current time.  <br/><br/>
+`RTC_Status_t rtc_get_date(RTC_Date_t *m_date)` Returns the current date.  <br/><br/>
 **Memory**  <br/>
-`RTC_Status_t rtc_save_time(void)` Saves current time to BKP0R register.  <br/>
-`RTC_Status_t rtc_save_date(void)` Saves current date to BKP1R register.  <br/>
-`RTC_Status_t rtc_restore_time(void)` Read the BKP3R register to validate the magic value. If the magic value is correct, load time from the BKP0R register.   <br/>
-`RTC_Status_t rtc_restore_date(void)` Read the BKP4R register to validate the magic value. If the magic value is correct, load the date from the BKP1R register.   <br/>
+`RTC_Status_t rtc_save_time(void)` Saves current time to BKP0R register.  <br/><br/>
+`RTC_Status_t rtc_save_date(void)` Saves current date to BKP1R register.  <br/><br/>
+`RTC_Status_t rtc_restore_time(void)` Read the BKP3R register to validate the magic value. If the magic value is correct, load time from the BKP0R register.   <br/><br/>
+`RTC_Status_t rtc_restore_date(void)` Read the BKP4R register to validate the magic value. If the magic value is correct, load the date from the BKP1R register.   <br/><br/>
 
 4. Alarms config functions  <br/>
 The library uses `ALARM A` and `ALARM B`.  <br/>
-`RTC_Status_t rtc_bind_time_alarm(RTC_Time_t *m_time, RTC_Alarm_t alarm_type)` Binds alarm for time.  <br/>
-`RTC_Status_t rtc_stop_alarm(RTC_Alarm_t alarm_type)` Stops the alarm and interrupt attached to that alarm.  <br/>
-`void rtc_alarm_interrupt_handler(RTC_Alarm_t curr_alarm)` Alarm handler for A and B. Call in `RTC_IRQHandler` or in the while loop.  <br/>
-`void rtc_alarm_callback(RTC_Time_t *m_time, RTC_Alarm_t curr_alarm)` This callback calls when alarm works.  <br/>
+`RTC_Status_t rtc_bind_time_alarm(RTC_Time_t *m_time, RTC_Alarm_t alarm_type)` Binds alarm for time.  <br/><br/>
+`RTC_Status_t rtc_stop_alarm(RTC_Alarm_t alarm_type)` Stops the alarm and interrupt attached to that alarm.  <br/><br/>
+`void rtc_alarm_interrupt_handler(RTC_Alarm_t curr_alarm)` Alarm handler for A and B. Call in `RTC_IRQHandler` or in the while loop.  <br/><br/>
+`void rtc_alarm_callback(RTC_Time_t *m_time, RTC_Alarm_t curr_alarm)` This callback calls when alarm works.  <br/><br/>
 
 ## Data Types <br/>
 1. Functions return status. <br/>
