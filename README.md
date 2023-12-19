@@ -1,7 +1,7 @@
 # Low-level RTC Driver for STM32L0 Series 
 Made by **Trippingcarpet** 
 
-[![Build Status](https://app.travis-ci.com/microsoft/DynamicProto-JS.svg?branch=master)](https://github.com/RedSideDevils/dma_driver_for_stm32/releases/tag/V1.0.0) 
+[![Build Status](https://app.travis-ci.com/microsoft/DynamicProto-JS.svg?branch=master)](https://github.com/RedSideDevils/stm32lx-Series-RTC-Driver/releases/tag/V1.0.0) 
 > Note: Tested with `STM32L071KBT6`
 
 ## Features
