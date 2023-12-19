@@ -53,7 +53,7 @@ Made by **Trippingcarpet**
 `RTC_Status_t rtc_restore_date(void)` Read the BKP4R register to validate the magic value. If the magic value is correct, load the date from the BKP1R register.   <br/><br/>
 
 4. Alarms config functions  <br/>
-The library uses `ALARM A` and `ALARM B`.  <br/>
+The library uses **ALARM A** and **ALARM B**.  <br/><br/>
 `RTC_Status_t rtc_bind_time_alarm(RTC_Time_t *m_time, RTC_Alarm_t alarm_type)` Binds alarm for time.  <br/><br/>
 `RTC_Status_t rtc_stop_alarm(RTC_Alarm_t alarm_type)` Stops the alarm and interrupt attached to that alarm.  <br/><br/>
 `void rtc_alarm_interrupt_handler(RTC_Alarm_t curr_alarm)` Alarm handler for A and B. Call in `RTC_IRQHandler` or in the while loop.  <br/><br/>
