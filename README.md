@@ -33,9 +33,9 @@ Made by **Trippingcarpet**
 
 ## Functions
 
-1. Init library function.
-`RTC_Status_t rtc_init_clock(void)` Function change clock source as LSE, sets prescaler to **1Hz**, and sync RTC clock. 
-**Call at the start of program**.
+1. Init library function.  <br/>
+`RTC_Status_t rtc_init_clock(void)` Function change clock source as LSE, sets prescaler to **1Hz**, and sync RTC clock.  <br/>
+**Call at the start of program**.  <br/>
 2. Start / Stop functions.
 `RTC_Status_t rtc_start_clock(void)` Starts RTC Clock.
 `RTC_Status_t rtc_stop_clock(void)` Stops RTC Clock.
